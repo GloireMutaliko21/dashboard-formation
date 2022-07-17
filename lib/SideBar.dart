@@ -141,37 +141,46 @@ class _NavItemState extends State<NavItem> {
         },
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Container(
-            height: 50.0,
-            margin: EdgeInsets.symmetric(vertical: 5),
-            decoration: widget.selected
-                ? BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: LinearGradient(
-                      colors: [
-                        const Color.fromARGB(255, 184, 72, 64).withOpacity(0.9),
-                        const Color.fromARGB(255, 180, 110, 40)
-                            .withOpacity(0.9),
-                      ],
-                    ),
-                  )
-                : null,
-            child: Container(
-              margin: EdgeInsets.only(left: 20),
-              child: Row(
-                children: [
-                  Icon(widget.icon,
-                      color: const Color.fromARGB(255, 19, 152, 185)),
-                  Container(
-                      margin: const EdgeInsets.only(left: 15),
-                      child: Text(
-                        widget.menu,
-                        style:
-                            const TextStyle(color: Colors.white, fontSize: 16),
-                      ))
-                ],
+          child: Column(
+            children: [
+              Container(
+                height: 50.0,
+                // margin: EdgeInsets.symmetric(vertical: 5),
+                decoration: widget.selected
+                    ? BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        gradient: LinearGradient(
+                          colors: [
+                            const Color.fromARGB(255, 184, 72, 64)
+                                .withOpacity(0.9),
+                            const Color.fromARGB(255, 180, 110, 40)
+                                .withOpacity(0.9),
+                          ],
+                        ),
+                      )
+                    : null,
+                child: Container(
+                  margin: EdgeInsets.only(left: 20),
+                  child: Row(
+                    children: [
+                      Icon(widget.icon,
+                          color: const Color.fromARGB(255, 19, 152, 185)),
+                      Container(
+                          margin: const EdgeInsets.only(left: 15),
+                          child: Text(
+                            widget.menu,
+                            style: const TextStyle(
+                                color: Colors.white, fontSize: 16),
+                          ))
+                    ],
+                  ),
+                ),
               ),
-            ),
+              const Divider(
+                color: Colors.white,
+                thickness: 0.1,
+              ),
+            ],
           ),
         ),
       ),
