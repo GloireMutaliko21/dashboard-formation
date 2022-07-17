@@ -37,6 +37,7 @@ dependencies:
   fl_chart: ^0.36.2
   curved_navigation_bar: ^1.0.3
   data_table_2: ^2.3.5
+  font_awesome_flutter: ^10.1.0
 
 dev_dependencies:
   flutter_test:
