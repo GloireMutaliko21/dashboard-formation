@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -12,10 +14,12 @@ class Todo {
 
 class PanelLeftPage extends StatefulWidget {
   @override
+  // ignore: library_private_types_in_public_api
   _PanelLeftPageState createState() => _PanelLeftPageState();
 }
 
 class _PanelLeftPageState extends State<PanelLeftPage> {
+  // ignore: prefer_final_fields
   List<Todo> _todos = [
     Todo(name: "Purchase Paper", enable: true),
     Todo(name: "Refill the inventory of speakers", enable: true),
@@ -99,7 +103,7 @@ class _PanelLeftPageState extends State<PanelLeftPage> {
                         (index) => CheckboxListTile(
                           title: Text(
                             _todos[index].name,
-                            style: TextStyle(color: Colors.white),
+                            style: const TextStyle(color: Colors.white),
                           ),
                           value: _todos[index].enable,
                           onChanged: (newValue) {

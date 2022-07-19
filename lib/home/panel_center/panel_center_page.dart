@@ -1,4 +1,5 @@
-import 'dart:ui';
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -10,20 +11,21 @@ class Person {
   Person({required this.name, required this.color});
 }
 
+// ignore: use_key_in_widget_constructors
 class PanelCenterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<Person> _persons = [
-      Person(name: "Theia Bowen", color: Color(0xfff8b250)),
-      Person(name: "Fariha Odling", color: Color(0xffff5182)),
-      Person(name: "Viola Willis", color: Color(0xff0293ee)),
-      Person(name: "Emmett Forrest", color: Color(0xfff8b250)),
-      Person(name: "Nick Jarvis", color: Color(0xff13d38e)),
-      Person(name: "ThAmit Clayeia", color: Color(0xfff8b250)),
-      Person(name: "ThAmalie Howardeia", color: Color(0xffff5182)),
-      Person(name: "Campbell Britton", color: Color(0xff0293ee)),
-      Person(name: "Haley Mellor", color: Color(0xffff5182)),
-      Person(name: "Harlen Higgins", color: Color(0xff13d38e)),
+    List<Person> persons = [
+      Person(name: "Theia Bowen", color: const Color(0xfff8b250)),
+      Person(name: "Fariha Odling", color: const Color(0xffff5182)),
+      Person(name: "Viola Willis", color: const Color(0xff0293ee)),
+      Person(name: "Emmett Forrest", color: const Color(0xfff8b250)),
+      Person(name: "Nick Jarvis", color: const Color(0xff13d38e)),
+      Person(name: "ThAmit Clayeia", color: const Color(0xfff8b250)),
+      Person(name: "ThAmalie Howardeia", color: const Color(0xffff5182)),
+      Person(name: "Campbell Britton", color: const Color(0xff0293ee)),
+      Person(name: "Haley Mellor", color: const Color(0xffff5182)),
+      Person(name: "Harlen Higgins", color: const Color(0xff13d38e)),
     ];
     return SingleChildScrollView(
       primary: false,
@@ -76,18 +78,18 @@ class PanelCenterPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20)),
               child: Column(
                 children: List.generate(
-                  _persons.length,
+                  persons.length,
                   (index) => ListTile(
                     leading: CircleAvatar(
                       radius: 15,
-                      backgroundColor: _persons[index].color,
+                      backgroundColor: persons[index].color,
                       child: Text(
-                        _persons[index].name.substring(0, 1),
-                        style: TextStyle(color: Colors.white),
+                        persons[index].name.substring(0, 1),
+                        style: const TextStyle(color: Colors.white),
                       ),
                     ),
                     title: Text(
-                      _persons[index].name,
+                      persons[index].name,
                       style: const TextStyle(color: Colors.white),
                     ),
                     trailing: IconButton(

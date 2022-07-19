@@ -9,8 +9,10 @@ class Product {
   Product({this.enable = true, required this.name});
 }
 
+// ignore: use_key_in_widget_constructors
 class PanelRightPage extends StatefulWidget {
   @override
+  // ignore: library_private_types_in_public_api
   _PanelRightPageState createState() => _PanelRightPageState();
 }
 
@@ -47,6 +49,7 @@ class _PanelRightPageState extends State<PanelRightPage> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50),
                 ),
+                // ignore: sized_box_for_whitespace
                 child: Container(
                   width: double.infinity,
                   child: const ListTile(
@@ -77,7 +80,7 @@ class _PanelRightPageState extends State<PanelRightPage> {
                     (index) => SwitchListTile.adaptive(
                       title: Text(
                         _products[index].name,
-                        style: TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Colors.white),
                       ),
                       value: _products[index].enable,
                       onChanged: (newValue) {

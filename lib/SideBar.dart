@@ -1,14 +1,12 @@
+// ignore_for_file: file_names, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:formation_dashboard/constants.dart';
 import 'package:formation_dashboard/pages/Ajouter_cours.dart';
 import 'package:formation_dashboard/pages/Param%C3%A8tres.dart';
 import 'package:formation_dashboard/pages/Home.dart';
 import 'package:formation_dashboard/pages/Participants.dart';
 import 'package:formation_dashboard/pages/Contacts.dart';
-
-import 'responsive_layout.dart';
 
 class LandingPage extends StatefulWidget {
   final String page;
@@ -160,7 +158,7 @@ class _NavItemState extends State<NavItem> {
                       )
                     : null,
                 child: Container(
-                  margin: EdgeInsets.only(left: 20),
+                  margin: const EdgeInsets.only(left: 20),
                   child: Row(
                     children: [
                       Icon(widget.icon,

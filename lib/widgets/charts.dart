@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
@@ -23,7 +25,7 @@ class Chart extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: Constants.kPadding),
+                const SizedBox(height: Constants.kPadding),
                 Text(
                   "29.1",
                   style: Theme.of(context).textTheme.headline4!.copyWith(
@@ -32,7 +34,7 @@ class Chart extends StatelessWidget {
                         height: 0.5,
                       ),
                 ),
-                Text("of 128GB")
+                const Text("of 128GB")
               ],
             ),
           ),
@@ -50,19 +52,19 @@ List<PieChartSectionData> paiChartSelectionDatas = [
     radius: 25,
   ),
   PieChartSectionData(
-    color: Color(0xFF26E5FF),
+    color: const Color(0xFF26E5FF),
     value: 20,
     showTitle: false,
     radius: 22,
   ),
   PieChartSectionData(
-    color: Color(0xFFFFCF26),
+    color: const Color(0xFFFFCF26),
     value: 10,
     showTitle: false,
     radius: 19,
   ),
   PieChartSectionData(
-    color: Color(0xFFEE2727),
+    color: const Color(0xFFEE2727),
     value: 15,
     showTitle: false,
     radius: 16,
@@ -1008,13 +1010,13 @@ class BarChartSample2State extends State<BarChartSample2> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
+                  children: const <Widget>[
                     //makeTransactionsIcon(),
-                    const Text(
+                    Text(
                       'Participations',
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
-                    const Text(
+                    Text(
                       r'126',
                       style: TextStyle(
                         color: Colors.white,
@@ -1055,6 +1057,7 @@ class BarChartSample2State extends State<BarChartSample2> {
                         barTouchData: BarTouchData(
                             touchTooltipData: BarTouchTooltipData(
                               tooltipBgColor: Colors.grey,
+                              // ignore: no_leading_underscores_for_local_identifiers
                               getTooltipItem: (_a, _b, _c, _d) => null,
                             ),
                             touchCallback: (response) {

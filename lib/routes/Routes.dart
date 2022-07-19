@@ -1,5 +1,6 @@
+// ignore_for_file: file_names
+
 import 'package:fluro/fluro.dart';
-import 'package:flutter/material.dart';
 import 'package:formation_dashboard/SideBar.dart';
 import '../SplashCreen.dart';
 
@@ -10,7 +11,7 @@ class Flurorouter {
       handlerFunc: (context,
               Map<String, dynamic>
                   params) => // Retourner ici en cas de probleme
-          SplashScreen());
+          const SplashScreen());
 
   static final Handler _mainHandler = Handler(
       handlerFunc: (context,
