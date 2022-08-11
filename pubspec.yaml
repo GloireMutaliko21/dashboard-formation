@@ -38,6 +38,11 @@ dependencies:
   curved_navigation_bar: ^1.0.3
   data_table_2: ^2.3.5
   font_awesome_flutter: ^10.1.0
+  file_picker: ^4.0.2
+  flutter_quill: ^5.1.0
+  tuple: ^2.0.0
+  open_file: ^3.2.1
+  path_provider: ^2.0.11
 
 dev_dependencies:
   flutter_test:

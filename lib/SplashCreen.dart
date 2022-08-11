@@ -16,10 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.pushNamed(context, '/main/home');
     });
     return const Scaffold(
-      body:  Text(
-        "SplashScreen",
-        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
-      ),
+      body: Center(),
     );
   }
 }
